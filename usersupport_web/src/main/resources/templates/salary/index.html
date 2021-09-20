@@ -10,7 +10,7 @@
 <div layout:fragment="content" class="container">
     <h2 style="text-align: center" class="mt-4">个人薪资数据</h2>
     <div class="table-responsive">
-        <table class="datatable table table-striped table-bordered" id="salaryTable">
+        <table class="datatable table table-striped table-bordered nowrap" id="salaryTable">
             <thead>
             <tr>
                 <th>工号</th>
@@ -65,7 +65,9 @@
     </div>
     <script>
         $(document).ready(function() {
-            $('#salaryTable').DataTable();
+            $('#salaryTable').DataTable( {
+                "scrollX": true
+            });
         } );
     </script>
 </div>
