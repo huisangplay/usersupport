@@ -66,7 +66,12 @@
     <script>
         $(document).ready(function() {
             $('#salaryTable').DataTable( {
-                "scrollX": true
+                "scrollX": true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5'
+                ]
             });
         } );
     </script>
