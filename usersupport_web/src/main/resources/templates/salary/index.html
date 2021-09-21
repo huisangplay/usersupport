@@ -37,7 +37,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr  th:each="salary : ${salaryList}" >
+            <tr th:each="salary : ${salaryList}">
                 <td th:text="${salary.enumber}"></td>
                 <td th:text="${salary.month}"></td>
                 <td th:text="${salary.postSalary}"></td>
@@ -64,8 +64,8 @@
         </table>
     </div>
     <script>
-        $(document).ready(function() {
-            $('#salaryTable').DataTable( {
+        $(document).ready(function () {
+            $('#salaryTable').DataTable({
                 "scrollX": true,
                 dom: 'Bfrtip',
                 buttons: [
@@ -73,7 +73,7 @@
                     'excelHtml5'
                 ]
             });
-        } );
+        });
     </script>
 </div>
 
