@@ -8,4 +8,7 @@ package com.comac.usersupport_web.constants;
  */
 public class UserConstants {
     public static final String IDENTIFIES="enumber";
+    //普通用户的默认role id
+    public static final Long DEFAULTROLEID=2L;
+
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>个人薪资数据</title>
+</head>
+<body>
+
+<div layout:fragment="content" class="container">
+    <form th:action="@{/salary/uploadSalaryData}" th:method="post" enctype="multipart/form-data">
+        <div class="row gy-3" style="margin-top: 15px;">
+            <div class="col-sm-6" style="width: auto;margin-bottom: 10px;">
+                <button type="submit" class="btn btn-primary">导入</button>
+            </div>
+            <div class="col-sm-6">
+                <input class="form-control" type="file" id="uploadSalaryFile" name="salaryListFile">
+            </div>
+        </div>
+    </form>
+
+    <div class="table-responsive">
+        <table class="datatable table table-striped table-bordered nowrap" id="salaryTable">
+            <thead>
+            <tr>
+                <th>工号</th>
+                <th>月份</th>
+                <th>岗位工资</th>
+                <th>工龄工资</th>
+                <th>绩效工资预发数</th>
+                <th>通讯补贴</th>
+                <th>绩效工资兑现数</th>
+                <th>独生子女费</th>
+                <th>补发工资</th>
+                <th>应发工资</th>
+                <th>养老保险</th>
+                <th>医疗保险</th>
+                <th>失业保险</th>
+                <th>住房公积金</th>
+                <th>补充公积金</th>
+                <th>企业年金</th>
+                <th>工会会费</th>
+                <th>税前扣款</th>
+                <th>税后扣款</th>
+                <th>个税</th>
+                <th>实发工资</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="salary : ${salaryList}">
+                <td th:text="${salary.enumber}"></td>
+                <td th:text="${salary.month}"></td>
+                <td th:text="${salary.postSalary}"></td>
+                <td th:text="${salary.ageSalary}"></td>
+                <td th:text="${salary.performanceSalaryTotal}"></td>
+                <td th:text="${salary.communicationSubsidy}"></td>
+                <td th:text="${salary.performanceSalaryCash}"></td>
+                <td th:text="${salary.oneChildBonus}"></td>
+                <td th:text="${salary.backPay}"></td>
+                <td th:text="${salary.totalPayAmount}"></td>
+                <td th:text="${salary.endowmentInsurance}"></td>
+                <td th:text="${salary.medicalInsurance}"></td>
+                <td th:text="${salary.unemploymentInsurance}"></td>
+                <td th:text="${salary.housingProvidentFund}"></td>
+                <td th:text="${salary.supplementaryProvidentFund}"></td>
+                <td th:text="${salary.supplementaryPension}"></td>
+                <td th:text="${salary.unionDues}"></td>
+                <td th:text="${salary.preTaxDeduction}"></td>
+                <td th:text="${salary.afterTaxDeduction}"></td>
+                <td th:text="${salary.individualIncomeTax}"></td>
+                <td th:text="${salary.realSalary}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <script th:inline="javascript">
+        $(document).ready(function () {
+            $('#salaryTable').DataTable({
+                "scrollX": true,
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5'
+                ]
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>

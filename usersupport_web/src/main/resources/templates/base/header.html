@@ -8,11 +8,10 @@
 <th:block th:fragment="header">
     <header class="site-header sticky-top py-1">
         <nav class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2 d-none d-md-inline-block" th:href="@{/}">主页</a>
-            <a class="py-2 d-none d-md-inline-block" th:href="@{/salary/index}">工资单</a>
-            <a class="py-2 d-none d-md-inline-block" th:href="@{/contact}">联系我们</a>
-            <a class="py-2 d-none d-md-inline-block" th:href="@{/about}">关于</a>
-            <a class="py-2 d-none d-md-inline-block" th:href="@{/logout}">注销</a>
+            <div th:each="roleMenu:${session.roleMenuList}">
+                <a class="py-2 d-none d-md-inline-block" th:href="@{${roleMenu.menu.url}}"
+                   th:text="${roleMenu.menu.name}"></a>
+            </div>
         </nav>
     </header>
 </th:block>

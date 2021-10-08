@@ -1,7 +1,5 @@
 package com.comac.usersupport_web.model;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Table;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.annotation.Id;
 
 import javax.persistence.Column;

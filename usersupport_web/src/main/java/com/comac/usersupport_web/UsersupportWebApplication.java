@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EntityScan("com.comac.usersupport_web.model")
+@ComponentScan("com.comac.usersupport_web.*")
 public class UsersupportWebApplication {
 
     public static void main(String[] args) {

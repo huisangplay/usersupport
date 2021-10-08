@@ -20,54 +20,76 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+            <systemPath>${basedir}\src\lib\spring-boot-starter-2.5.4.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <systemPath>${basedir}\src\lib\spring-boot-starter-test-2.5.4.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
+            <systemPath>${basedir}\src\lib\spring-boot-starter-web-2.5.4.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <systemPath>${basedir}\src\lib\spring-boot-starter-thymeleaf-2.5.4.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>nz.net.ultraq.thymeleaf</groupId>
             <artifactId>thymeleaf-layout-dialect</artifactId>
+            <systemPath>${basedir}\src\lib\thymeleaf-layout-dialect-2.5.3.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>RELEASE</version>
             <scope>compile</scope>
+            <systemPath>${basedir}\src\lib\spring-data-jpa-2.5.4.jar</systemPath>
         </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.26</version>
+            <systemPath>${basedir}\src\lib\mysql-connector-java-8.0.26.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.12.0</version>
+            <systemPath>${basedir}\src\lib\commons-lang3-3.12.0.jar</systemPath>
         </dependency>
-
+        <dependency>
+            <groupId>com.comac</groupId>
+            <artifactId>isc_sso_agent</artifactId>
+            <version>2.1.14</version>
+            <systemPath>${basedir}\src\lib\isc_sso_agent-2.1.14.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <systemPath>${basedir}\src\lib\spring-boot-configuration-processor-2.5.4.jar</systemPath>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.0.0</version>
+            <systemPath>${basedir}\src\lib\poi-ooxml-5.0.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>5.0.0</version>
+            <systemPath>${basedir}\src\lib\poi-5.0.0.jar</systemPath>
+        </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
